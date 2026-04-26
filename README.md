@@ -36,6 +36,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 - Support install on Linux.
 - Optional server and/or personal save backup features.
 - Support server functions on a remote PC (in the same LAN).
+- Consider integration with existing Windrose server mods/managers. Something that could offload some of my feature development by piping through commands and responses could be a benefit, but would require a large dependency that some users could be uncomfortable with, and could require maintenance. Might be good for optional expanded features though.
 
 ### Future
 - Plex integration (only for me).
