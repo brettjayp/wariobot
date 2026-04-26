@@ -35,6 +35,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 	- Enables implementing a server timeout if no connections are active for a configurable amount of time.
 - Support install on Linux.
 - Optional server and/or personal save backup features.
+- Support server functions on a remote PC (in the same LAN).
 
 ### Future
 - Plex integration (only for me).
