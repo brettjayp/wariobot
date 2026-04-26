@@ -1,4 +1,5 @@
 .secretsLocal
+.venv/
 ./venv/
 venv/
 .env
