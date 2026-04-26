@@ -15,8 +15,8 @@ windrose = rf'{os.getenv('windroseServerExe')}'
 # discord.py setup stuff
 intents = discord.Intents.default()
 intents.message_content = True
-intents.members = True
 
+# TODO: Migrate from discord.Client to discord.Bot
 client = discord.Client(intents=intents)
 
 
@@ -53,6 +53,7 @@ async def on_ready():
 		print('Channel not found.')
 
 
+# TODO: After migration to discord.Bot, ditch message based commands for slash commands. After, see if we can reduce required intents.
 @client.event
 async def on_message(message):
 	status = pWindrose('status')
@@ -87,3 +88,5 @@ async def on_message(message):
 
 
 client.run(botToken)
+
+# Meme credit to Superkai64 and ZodiaxEU. https://knowyourmeme.com/memes/dedotated-wam
