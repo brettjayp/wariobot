@@ -14,7 +14,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 - Invite bot to Discord server.
 - Add a dedicated channel ID to broadcastChannel to restrict system messages to (not replies).
 - Add path to windroseServerExe. I strongly recommend using the WindroseServer-Win64-Shipping.exe file until this tool is further developed, this
-	can be found at `*\\SteamLibrary\\steamapps\\common\\Windrose Dedicated Server\\R5\\Binaries\\Win64\\WindroseServer-Win64-Shipping.exe`
+	can be found at `*\SteamLibrary\steamapps\common\Windrose Dedicated Server\R5\Binaries\Win64\WindroseServer-Win64-Shipping.exe`
 - Run tool from repo directory with `python3 ./bot.py`
 
 ### Immediate Plans
