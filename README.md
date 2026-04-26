@@ -3,6 +3,8 @@
 ### Quick Description
 Just a personal tool for automating certain tasks through Discord. For example, starting/stopping a dedicated game server shared with friends.
 
+Currently, the extent of the functionality is replying to a `!hello` message, and starting and stopping an instance of a Windrose dedicated server.
+
 ### Install
 ##### (This was written off the top of my head the day after setup, I'll verify and improve later)
 - Copy repo to Windows machine where Windrose dedicated server is installed.
