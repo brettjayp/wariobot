@@ -22,6 +22,7 @@ client = discord.Client(intents=intents)
 
 # subprocess helper
 # TODO: switch case, check system for existing process, open process outside of python task tree
+windrosePID = int(0)
 def pWindrose(command):
 	global windrosePID
 	if command == 'up':
@@ -31,7 +32,7 @@ def pWindrose(command):
 		return windrosePID
 
 	if command == 'down':
-		ifprocWindrose:
+		if procWindrose:
 			procWindrose.terminate()
 			windrosePID = 0
 		return windrosePID
@@ -69,7 +70,7 @@ async def on_message(message):
 			await message.channel.send(f'A Windrose dedotated server is detected with PID: {status}')
 
 	if message.content.startswith('!wr up'):
-		if status = 0:
+		if status == 0:
 			pWindrose('up')
 			status = pWindrose('status')
 			await message.channel.send(f'Starting the Windrose dedotated server. Process started with PID: {status}')
