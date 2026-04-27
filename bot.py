@@ -1,6 +1,8 @@
 import discord
-import subprocess
+import logging
+import logging.handlers
 import os
+import subprocess
 
 from dotenv import load_dotenv
 
@@ -15,6 +17,20 @@ windrose = rf'{os.getenv('windroseServerExe')}'
 # discord.py setup stuff
 intents = discord.Intents.default()
 intents.message_content = True
+
+logger = logging.getLogger('discord')
+logger.setLevel(logging.DEBUG)
+
+handler = logging.handlers.RotatingFileHandler(
+	filename = './logging/discord.log',
+	encoding = 'utf-8',
+	maxBytes = 32 * 1024 * 1024, # 32 MiB
+	backupCount = 5
+)
+dt_fmt = '%Y-%m-%d %H:%M:%S'
+formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', dt_fmt, style='{')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 
 # TODO: Migrate from discord.Client to discord.Bot
 client = discord.Client(intents=intents)
@@ -87,6 +103,6 @@ async def on_message(message):
 			await message.channel.send('No Windrose dedotated server was detected.')
 
 
-client.run(botToken)
+client.run(botToken, log_handler=None)
 
 # Meme credit to Superkai64 and ZodiaxEU. https://knowyourmeme.com/memes/dedotated-wam
