@@ -13,6 +13,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 <!-- TODO: Add tips for shutting the venv and loading the script again later without activating the venv. -->
 - Copy or rename `env` to `.env`.
 - Add a Discord bot token from your Discord dev portal, ensure bot is allowed to view usernames, write messages, and read messages.
+	- If you haven't already, you'll need to register a new bot through the [Discord Developer Portal](discord.com/developers/home).
 	- Presence and Server Members privileged intents are required. This is used to view message contents and message authors.
 - Invite bot to Discord server.
 - Add a dedicated channel ID to broadcastChannel to restrict system messages to (not replies).
@@ -21,7 +22,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 - Run tool from repo directory with `python3 ./bot.py`
 
 ### Immediate Plans
-- Improve pythonics, structure, commenting, explicit typing, etc. Just do better.
+- Improve pythonics, structure, commenting, type hinting, etc. Just do better.
 - Improve process control.
 	- By identifying running processes, I can check if a server is already running that the bot didn't start.
 	- Terminate the task tree, allowing for edge cases where child or parent tasks are running.
@@ -34,6 +35,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 	- Limit idle CPU usage.
 - Error handling and logs.
 - Support multiple servers.
+<!-- NOTE: Maybe this would include a small SQLite DB, or just a seperate text file, for persistent naming and tracking of running servers. Path would likely depond on what features a database would be useful for, and whether I want to implement them any time soon. Another potential use would be storing data required for remote server implementation, and editing that data through Discord as a CLI. -->
 - Server status/health monitoring.
 	- Enables implementing a server timeout if no connections are active for a configurable amount of time.
 - Support install on Linux.
