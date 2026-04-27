@@ -1,3 +1,4 @@
+<!-- Personal reminder that this is how to use comments that Github will ignore on render -->
 # wariobot
 
 ### Quick Description
@@ -9,8 +10,10 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 ##### (This was written off the top of my head the day after setup, I'll verify and improve later)
 - Copy repo to Windows machine where Windrose dedicated server is installed.
 - Create venv at repo root directory, load requirements.
+<!-- TODO: Add tips for shutting the venv and loading the script again later without activating the venv. -->
 - Copy or rename `env` to `.env`.
 - Add a Discord bot token from your Discord dev portal, ensure bot is allowed to view usernames, write messages, and read messages.
+	- Presence and Server Members privileged intents are required. This is used to view message contents and message authors.
 - Invite bot to Discord server.
 - Add a dedicated channel ID to broadcastChannel to restrict system messages to (not replies).
 - Add path to windroseServerExe. I strongly recommend using the WindroseServer-Win64-Shipping.exe file until this tool is further developed, this
@@ -18,7 +21,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 - Run tool from repo directory with `python3 ./bot.py`
 
 ### Immediate Plans
-- Improve pythonics, structure, commenting, etc. Just do better.
+- Improve pythonics, structure, commenting, explicit typing, etc. Just do better.
 - Improve process control.
 	- By identifying running processes, I can check if a server is already running that the bot didn't start.
 	- Terminate the task tree, allowing for edge cases where child or parent tasks are running.
