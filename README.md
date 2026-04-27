@@ -22,6 +22,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 - Run tool from repo directory with `python3 ./bot.py`
 
 ### Immediate Plans
+- Create an install script. This should manage the venv and requirements install, take input for setup, and allow a shortcut creation.
 - Improve pythonics, structure, commenting, type hinting, etc. Just do better.
 - Improve process control.
 	- By identifying running processes, I can check if a server is already running that the bot didn't start.
