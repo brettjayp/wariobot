@@ -1,4 +1,4 @@
-<!-- Personal reminder that this is how to use comments that Github will ignore on render -->
+<!-- NOTE: Personal reminder that this is how to use comments that Github will ignore on render -->
 # wariobot
 
 ### Quick Description
@@ -22,7 +22,7 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 - Run tool from repo directory with `python3 ./bot.py`
 
 ### Immediate Plans
-- Create an install script. This should manage the venv and requirements install, take input for setup, and allow a shortcut creation.
+- Create an install script. This should manage the venv and requirements install, take input for setup, and allow a shortcut creation. Also, look into whether FPM would be a good tool for this. Or generate binary/exe.
 - Improve pythonics, structure, commenting, type hinting, etc. Just do better.
 - Improve process control.
 	- By identifying running processes, I can check if a server is already running that the bot didn't start.
@@ -40,9 +40,12 @@ Currently, the extent of the functionality is replying to a `!hello` message, an
 - Server status/health monitoring.
 	- Enables implementing a server timeout if no connections are active for a configurable amount of time.
 - Support install on Linux.
+	- Implement systemd for Linux, nssm for Windows. Make sure there is a service monitoring the server process in order to send an alert if it detects a server process has ended unexpectedly.
+- Optional update check and alert feature, with configurable reminders.
 - Optional server and/or personal save backup features.
 - Support server functions on a remote PC (in the same LAN).
 - Consider integration with existing Windrose server mods/managers. Something that could offload some of my feature development by piping through commands and responses could be a benefit, but would require a large dependency that some users could be uncomfortable with, and could require maintenance. Might be good for optional expanded features though.
+- (maybe) Figure out a graceful way to enable one bot to function in multiple Discord guilds/servers.
 
 ### Future
 - Plex integration (only for me).
